@@ -1,0 +1,52 @@
+Introdução
+O looping, também conhecido como iteração, é a capacidade de executar uma sequência de comandos várias vezes. Em Python, existem duas estruturas de controle de fluxo que podem ser usadas para criar loops: for e while.
+
+Sintaxe
+O loop for é usado para iterar sobre uma sequência de elementos, como uma lista ou uma string.
+# imprime cada elemento da lista
+for elemento in [1, 2, 3]:
+    print(elemento)
+
+# imprime cada caractere da string
+for caractere in "Olá, mundo!":
+    print(caractere)
+
+# imprimindo os números de 1 a 5
+for i in range(1, 6):
+    print(i)
+
+O loop while é usado para executar uma sequência de comandos enquanto uma determinada condição é verdadeira:
+
+# imprimindo os números de 1 a 5
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
+
+Em ambos os casos, é importante tomar cuidado para garantir que a condição de repetição será alterada de 
+lguma forma dentro do laço, caso contrário você pode criar um laço infinito. No caso do for, ele sempre irá
+ até o fim do iterável em questão.
+
+Auxiliares
+Além disso, você pode usar o comando break para interromper um laço antes que a condição de repetição 
+seja falsa, e o comando continue para interromper a iteração atual e avançar para a próxima.
+
+# imprimindo os números de 1 a 5, mas interrompendo o laço quando o número é 3
+for i in range(1, 6):
+    if i == 3:
+        break
+    print(i)
+
+# imprimindo os números de 1 a 5, pulando o número 3
+for i in range(1, 6):
+    if i == 3:
+        continue
+    print(i)
+
+    _______________________________________________________________________________
+    
+Loops | Python Docs
+https://docs.python.org/pt-br/3/tutorial/controlflow.html?highlight=pass#for-statements
+
+range | Python Docs
+https://docs.python.org/pt-br/3/tutorial/controlflow.html?highlight=pass#for-statements

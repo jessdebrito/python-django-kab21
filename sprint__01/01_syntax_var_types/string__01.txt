@@ -1,0 +1,125 @@
+# Soma de strings
+
+string_1 = 'cow'
+string_2 = 'boy'
+print(string_1 + string_2)
+print(type(string_1 + string_2))
+# --------------------------------------------------
+mensagem = 'Olá, Python!'
+>>> ⁠primeiro_caractere = mensagem[0]
+>>> primeiro_caractere
+'O'
+>>> ultimo_caractere = mensagem[-1]
+>>> ultimo_caractere
+'!'
+>>> penultimo_caractere = mensagem[-2]
+>>> penultimo_caractere
+'n'
+
+
+
+
+>>> string = 'Monty Python'
+>>> string
+'Monty Python'
+>>> string[0:4]
+'Mont'
+>>> string[0:5]
+'Monty'
+>>> string[:5]
+'Monty'
+>>> string[6:12]
+'Python'
+>>> string[6:]
+'Python'
+>>> string[0:12:2]
+'MnyPto'
+>>> string[::2]
+'MnyPto'
+
+
+Metodo para contar os characters
+
+>>> string = 'Monty Python'
+len(string)
+12
+
+- Metodo para colocar a string em maiúsculo
+    >>> string = 'monty python'
+    
+string.capitalize()
+'Monty python'
+
+- Metodo para saber quantas vezes um character aparece
+string.count('python')
+1
+string.count('y')
+2
+
+- Metodo para saber se uma string inicia ou termina com uma determinada sequência
+
+string.startswith('python')
+false
+
+string.endswith('python')
+true
+
+- Verifica se todo o conteudo é minúsculo
+    >>> string = 'monty python'
+string.islower()
+True
+
+
+- Verifica se todo o conteudo é maiúsculo
+    >>> string = 'monty python'
+string.isupper()
+False
+
+
+- Transforma todas as letras em maiúsculas
+    >>> string = 'monty python'
+string.upper()
+MONTY PYTHON
+
+- Transforma todas as letras em minúsculas
+    >>> string = 'MONTY PYTHON'
+string.lower()
+monty python
+
+
+- Converte todos os valores de minúsculo p/ maiúsculo
+                            e maiúsculo p/ minúsculo:
+    >>> string = 'Monty Python'
+string.swapcase()
+'mONTY pYTHON'
+
+
+- Converte a primeira letra de todas as palavras em maiúsculas:
+    >>> string = 'monty python'
+string.title()
+'Monty Python'
+
+- Converte a primeira letra em maiúsculas:
+    >>> string = 'monty python'
+string.capitalize()
+'Monty python'
+
+- Coloca os valores da string em lista:
+    >>> string = 'monty python'
+string.split()
+['monty','python']
+
+    >>> string = 'monty+python'
+string.split('+')
+['monty','python']
+
+- Substitu um treixo inteiro de uma string por outro:
+    >>> string = 'monty python'
+string.replace('monty','kenzie')
+'kenzie python'
+
+
+- Centraliza a string, usando um character especifico: string.center(length,character)
+    >>> string = 'Python'
+string.center(20,'-')
+'-------Python-------'

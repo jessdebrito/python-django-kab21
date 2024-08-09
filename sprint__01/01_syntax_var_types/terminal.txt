@@ -1,0 +1,2 @@
+Limpar terminal
+    Ctrl + L

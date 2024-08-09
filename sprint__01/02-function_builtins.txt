@@ -1,0 +1,27 @@
+    Definindo funções | Python Docs
+https://docs.python.org/pt-br/3/tutorial/controlflow.html#defining-functions
+
+    Funções builtins | Python Docs
+https://docs.python.org/pt-br/3/library/functions.html
+
+    Mais ferramentas | Python Docs
+https://docs.python.org/pt-br/3/tutorial/controlflow.html#more-on-defining-functions
+
+
+
+- Introdução
+Em Python, uma função é um conjunto de instruções que realizam uma tarefa específica 
+e podem ser chamadas repetidamente durante a execução de um programa. As funções são 
+úteis porque permitem que você divida um programa em partes mais gerenciáveis e 
+reutilizáveis, o que pode torná-lo mais legível e fácil de manter.
+
+    - Sintaxe
+Para criar uma função em Python, você deve usar a palavra-chave def, seguida pelo nome 
+da função e seus parâmetros, se houverem, entre parênteses. Em seguida, você deve ir 
+para a próxima linha e escrever as instruções da função indentadas corretamente.
+
+    - Funções builtins
+Os builtins (ou funções embutidas) são funções e tipos de dados que estão disponíveis 
+por padrão no interpretador, sem precisar importar nenhum módulo ou pacote adicional. 
+Esses builtins incluem funções como print(), type() e len(), bem como tipos de dados 
+como int, float, str e bool.

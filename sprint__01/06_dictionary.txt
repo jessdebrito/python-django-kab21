@@ -1,0 +1,103 @@
+# #     Introdução
+Os dicionários em Python são uma estrutura de dados que permite armazenar pares
+de valores-chave (também conhecidos como itens) de forma organizada e eficiente.
+Cada item de um dicionário é composto por uma chave e um valor, e os itens são 
+armazenados para permitir um acesso rápido a qualquer valor usando sua chave 
+correspondente.
+
+
+
+# #     Sintaxe
+Para criar um dicionário em Python, basta colocar os itens do dicionário entre 
+chaves ({ }) e separá-los por vírgulas. As chaves e os valores são separados por dois 
+pontos. As chaves servem para indexar (posicionar) determinado elemento no dicionário, 
+devem ser únicas e só podem ser de tipos imutáveis. Geralmente em desenvolvimento web 
+utilizaremos o tipo string para nossas chaves:
+
+# cria um dicionário de strings
+meu_dicionario = {"nome": "João", "idade": 30, "cidade": "São Paulo"}
+
+# cria um dicionário misto
+outro_dicionario = {1: "Maria", ('uma', 'tupla'): 25, "ativo": True}
+
+# #     Manipulando dicionários
+É possível acessar os valores de um dicionário usando suas chaves correspondentes. Também 
+é possível adicionar, atualizar e remover itens de um dicionário usando os operadores de 
+atribuição e de exclusão:
+
+>>> meu_dicionario = {"nome": "João", "idade": 30, "cidade": "São Paulo"}
+
+# acessa o valor da chave "nome"
+>>> meu_dicionario["nome"]
+'João'
+
+# adiciona um novo item ao dicionário
+>>> meu_dicionario["profissao"] = "programador"
+>>> meu_dicionario  
+{'nome': 'João', 'idade': 30, 'cidade': 'São Paulo', 'profissao': 'programador'}
+
+# atualiza o valor da chave "idade"
+>>> meu_dicionario["idade"] = 31
+>>> meu_dicionario
+{'nome': 'João', 'idade': 31, 'cidade': 'São Paulo', 'profissao': 'programador'}
+
+# remove o item com a chave "profissao"
+>>> del meu_dicionario["profissao"]
+>>> meu_dicionario
+{'nome': 'João', 'idade': 31, 'cidade': 'São Paulo'}
+>>> # remove o item com a chave "idade" e retorna seu valor
+>>> meu_dicionario.pop("idade")
+31
+>>> meu_dicionario
+{'nome': 'João', 'cidade': 'São Paulo'}
+
+# atualiza multiplos items
+>>> meu_dicionario.update({"modulo": "M5", "cidade": "Curitiba"})
+>>> meu_dicionario
+{'nome': 'João', 'cidade': 'Curitiba', 'modulo': 'M5'}
+
+
+# #      Método get
+O método dict.get(key[, default]) é um método de dicionário em Python que permite recuperar 
+o valor de um item do dicionário usando sua chave. Se o item com a chave especificada existir 
+no dicionário, o método retorna o valor do item. Se o item não existir, o método retorna o 
+valor padrão especificado (ou None, se o valor padrão não for especificado):
+
+>>> meu_dicionario = {"nome": "João", "idade": 30, "cidade": "São Paulo"}
+
+# recupera o valor da chave "nome"
+>>> nome = meu_dicionario.get("nome")
+>>> nome
+'João'
+
+# recupera o valor da chave "profissao" (que não existe no dicionário)
+>>> valor = meu_dicionario.get("profissao", "essa chave nao existe :(")
+>>> valor
+'essa chave nao existe :('
+
+# # Looping
+É possível usar loops for para percorrer os itens de um dicionário em Python. Quando se itera 
+sobre um dicionário, o loop retorna as chaves do dicionário em cada iteração, mas podemos 
+utilizar de alguns métodos para escolher sobre quais características queremos iterar sobre:
+
+meu_dicionario = {"nome": "João", "idade": 30, "cidade": "São Paulo"}
+
+# percorre somente as chaves do dicionário e as imprime
+for chave in meu_dicionario:
+    print(chave) # imprime 'nome', 'idade', 'cidade'
+
+# o equivalente ao loop acima seria
+for chave in meu_dicionario.keys():
+    print(chave) # imprime 'nome', 'idade', 'cidade'
+
+# percorre as chaves do dicionário e as usa para imprimir os valores
+for chave in meu_dicionario:
+    print(meu_dicionario[chave]) # imprime 'João', 30, 'São Paulo'
+
+# o equivalente ao loop acima seria
+for valor in meu_dicionario.values():
+    print(valor) # imprime 'João', 30, 'São Paulo'
+
+# percorre os itens do dicionário e imprime os pares chave-valor
+for chave, valor in meu_dicionario.items():
+    print(f"{chave}: {valor}")  # imprime "nome: João", "idade: 30", "cidade: São Paulo"

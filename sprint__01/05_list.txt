@@ -1,0 +1,109 @@
+# # Introdução
+As listas em Python são uma estrutura de dados que permite armazenar uma coleção
+de elementos em uma única variável. As listas são mutáveis, o que significa que 
+os elementos de uma lista podem ser modificados após a lista ter sido criada.
+
+# Sintaxe
+As listas em Python são muito versáteis e podem conter elementos de qualquer tipo,
+incluindo números, strings, listas, entre outros. Para criar uma lista em Python,
+basta colocar os elementos da lista entre colchetes e separá-los por vírgulas. 
+Outra forma é utilizando a função embutida list().
+
+# Podemos criar uma lista com sintaxe literal []
+>>> minha_lista = [3, "abacate", 9.7, [4, 5, 6]]
+>>> minha_lista[3]
+[4, 5, 6]
+
+# Utilizando o builtin list() para trabalhar com lista:
+>>> minha_lista = list("abc")
+>>> minha_lista
+['a', 'b', 'c']
+
+
+Podemos ver no código acima que utilizamos os dois modos para lidar com listas. A 
+diferença é que a função list() leva um iterável (um objeto em que pode ser feito um
+loop) como argumento e popula a lista resultante com cada um dos valores do iterável.
+No exemplo acima, "abc" é uma string, que é iterável, e retorna um caractere por 
+vez quando é iterada sobre. Caso eu tente passar um valor numérico para minha 
+função list(), ocorrerá um erro dizendo que o valor não é iterável:
+
+>>> minha_lista = list(123)
+
+Traceback (most recent call last):
+   File "<stdin>", line 1, in <module>
+TypeError: 'int' object is not iterable
+
+Fatiamento de listas
+É possível acessar e modificar os elementos de uma lista usando índices ou usando o 
+operador de fatia [:]. Também é possível usar loops for para percorrer os elementos 
+de uma lista e realizar ações com cada um deles.
+
+>>> minha_lista = ['1', 'teste', '3']
+
+# Acessando o primeiro elemento:
+>>> minha_lista[0]
+'1'
+
+# Para acessarmos o último elemento, temos duas maneiras:
+>>> minha_lista[2]
+'3'
+>>> minha_lista[-1]
+'3'
+
+# Acessando um intervalo do começo da lista até o indice 2
+# Lembrando que o limite (nesse caso indice 2) não é considerado no fatiamento:
+>>> minha_lista[0:2]
+['1', 'teste']
+
+# Acessando o intervalo entre o início e o indice 3 com o passo de 2:
+>>> minha_lista[0:3:2]
+['1', '3']
+
+# Acessando toda lista com o passo de 2:
+>>> minha_lista[::2]
+['1', '3']
+
+
+>>> carrinho_de_compras = ["Banana", "Pera", "Tomate"]
+>>> for item in carrinho_de_compras:
+        print(item)
+'Banana'
+'Pera'
+'Tomate'
+
+Manipulando items
+As listas em Python possuem vários métodos úteis que podem ser usados para manipular 
+e trabalhar com os elementos da lista. Aqui estão alguns dos principais:
+
+list.append(x): adiciona o elemento x no final da lista.
+list.extend(iterable): estende a lista adicionando todos os elementos do iterável (por 
+exemplo, outra lista) no final da lista.
+list.insert(i, x): insere o elemento x na posição de índice i da lista.
+list.remove(x): remove o primeiro elemento da lista cujo valor é igual a x.
+list.pop([i]): remove o elemento na posição de índice i da lista (ou o último elemento
+se i não for especificado) e o retorna.
+list.clear(): remove todos os elementos da lista.
+list.index(x[, start[, end]]): retorna o índice do primeiro elemento da lista cujo valor
+ é igual a x. É possível especificar os índices de início e fim da pesquisa usando as 
+ opções start e end.
+list.count(x): retorna o número de vezes que o elemento x aparece na lista.
+list.sort(key=None, reverse=False): classifica os elementos da lista em ordem crescente 
+(ou decrescente, se reverse for verdadeiro). É possível especificar uma função de chave 
+para determinar como os elementos são comparados usando a opção key.
+list.reverse(): inverte a ordem dos elementos da lista.
+Exemplificando alguns desses métodos:
+
+# cria uma lista de números
+minha_lista = [1, 2, 3, 4, 5]
+
+# adiciona o número 6 no final da lista
+minha_lista.append(6)
+print(minha_lista)  # imprime [1, 2, 3, 4, 5, 6]
+
+# estende a lista com outra lista de números
+minha_lista.extend([7, 8, 9])
+print(minha_lista)  # imprime [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# insere o número 0 na posição de índice 0 da lista
+minha_lista.insert(0, 0)
+print(minha_lista)  # imprime [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
