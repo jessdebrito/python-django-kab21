@@ -1,0 +1,4 @@
+    Pacote, arquitetura, funcionalidades e estruturas
+
+
+    - Dunder init (__init__.py) = Double underscore
